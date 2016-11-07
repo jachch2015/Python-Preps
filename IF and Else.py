@@ -1,0 +1,5 @@
+prep = input("What did you get in your prep /10?")
+if prep > "5":
+    print("you passed")
+else:
+    print("your a failure")
