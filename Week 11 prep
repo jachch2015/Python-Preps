@@ -5,3 +5,26 @@ number2=int(input("Please enter you second number"))#this is where we input the 
 number3=int(input("Please enter your third number"))
 total=number1+number2+number3#this is the process and calculation with the three numbers
 print("The total of the threee numbers is:",total)#this is the output, it displays the final answer.
+#This program adds up the three numbers you input
+
+
+
+import time
+Total=0
+
+print("Hell0, this is Christopher's addition program, it adds up the three numbers you will enter")
+time.sleep(4)#An introduction to what the program does
+
+
+Number_1=int(input("Please enter your first number"))
+time.sleep(1)
+Number_2=int(input("Please enter you second number"))#this is where we input the numbers
+time.sleep(1)
+Number_3=int(input("Please enter your third number"))
+time.sleep(1)#This creates a little pause inbetween questions to make thinsg look better
+
+
+Total=Number_1+Number_2+Number_3#this is the process and calculation with the three numbers
+print("So",Number_1," + ",Number_2," + ",Number_3," = ",Total,)
+time.sleep(2)
+print("The total of the three numbers is:",Total)#this is the output, it displays the final answer.
