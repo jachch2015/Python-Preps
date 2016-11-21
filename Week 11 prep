@@ -1,0 +1,7 @@
+#This program adds up the three numbers you input
+total=0 
+number1=int(input("Please enter your first numebr"))
+number2=int(input("Please enter you second number"))#this is where we input the numbers
+number3=int(input("Please enter your third number"))
+total=number1+number2+number3#this is the process and calculation with the three numbers
+print("The total of the threee numbers is:",total)#this is the output, it displays the final answer.
