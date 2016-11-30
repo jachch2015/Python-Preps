@@ -1,0 +1,30 @@
+#This is my dodgy depressing dice game rolling game
+#It rolls two six sided die and asks you whether you want to keep the numbers you rolled
+#This program will only accept "yes" or "no" answers
+
+import random #This makes the program know what time and random is
+import time
+
+roll1=random.randint(1,6)
+roll2=random.randint(1,6)#This selects two random numbers from 1-6
+print("You rolled",roll1,"and",roll2,",")
+time.sleep(1)
+
+continuation=str(input("Would you like to keep these numbers?"))#This asks whether you want to keep the numbers you rolled
+    
+while continuation=="no":#This whole process repeats forever untill you say yes
+    
+    roll1=random.randint(1,6)#This selects another set of random numbers
+    roll2=random.randint(1,6)
+    time.sleep(1)#This makes the program wait a second 
+    print("You rolled",roll1,"and",roll2,",")#this tells us what we rolled
+    time.sleep(1)
+    continuation=str(input("Would you like to keep these numbers?"))#this asks whether we want to keep them again 
+
+    if continuation == "yes":#This stops the loop above if you say yes
+        time.sleep(1)
+        print("Program terminating")#This ends the program
+
+
+
+
