@@ -1,0 +1,103 @@
+#This is my parking metre program
+#Every hour costs £4
+#This parking metre only accept hole pounds, using pence will break the program
+#When it askes for the receipt the program only accepts "yes" and "no" answers
+#The marking spot must consist of 2 characters (otherwise the receipt looks uguly)
+
+
+import time #makes the program know what time is
+
+totalCash=0
+hours=int(input("How many hours will you be parked here?")) #asks for the hours you are going to stay
+parkingPlace=str(input("\nWhere are you parked?"))
+
+cost=hours*4 #this calculates how much it will cost
+print("\nThis will cost £",cost,)#this displays the cost
+
+while totalCash < cost:#This continues to ask for more money untill they amount is payed
+    coins=int(input("\nPlease enter your coins"))
+    time.sleep(1)
+    totalCash=totalCash+coins
+
+    if totalCash < cost:#this 'if' statement is here so that when you enter over the amount, it does not say you have to pay £-4.
+        print("\n\nYou have entered £",totalCash,"in total\n\nYou still need to enter",(cost-totalCash),"more")#this updates the user to how much they have and need to pay
+        time.sleep(1)
+  
+if totalCash == cost:
+        answer=str(input("\nThank you, would you like a receipt?"))
+        time.sleep(1)
+
+        if answer=="yes": #check if you have said yes, if you have it prints the receipt
+            time.sleep(1)
+            print("\nprinting receipt....")
+            time.sleep(1)
+            print("\n\n---------------------6/12/16---")
+            time.sleep(0.2)
+            print("-------------------------------")
+            time.sleep(0.2)
+            print("--------Parking Receipt--------")
+            time.sleep(0.2)
+            print("-------------------------------")#this is the receipt
+            time.sleep(0.2)
+            print("----Number-of-hours-parked:----")
+            time.sleep(0.2)
+            print("---------------",(hours),"-------------")
+            time.sleep(0.2)
+            print("---------Parking-Place:--------")
+            time.sleep(0.2)
+            print("--------------",parkingPlace,"-------------")
+            time.sleep(0.2)      
+            print("-------------------------------")
+            time.sleep(0.2)
+            print("----------Amount needed =",(cost),"--")
+            time.sleep(0.2)
+            print("----------Amount entered=",totalCash,"--")
+            time.sleep(0.2)
+            print("-------------------------------")
+            time.sleep(0.2)
+            print("-----------------Change=",(totalCash-cost),"----")
+            time.sleep(0.2)
+            print("-------------------------------")
+
+        else:
+            print("Thank you for using Christophers Parking metre") #if you don't say yes the program ends and says thank you
+
+
+elif totalCash > cost:
+    print("Thank you, your change is £",(totalCash-cost)) #displays the change
+    time.sleep(1)
+    answer=str(input("\nWould you like a reciept?"))
+
+    if answer=="yes":#checks if you have answered yes, if so it prints the receipt
+            time.sleep(1)
+            print("\nprinting receipt....")
+            time.sleep(1)
+            print("\n\n---------------------6/12/16---")
+            time.sleep(0.2)
+            print("-------------------------------")
+            time.sleep(0.2)
+            print("--------Parking Receipt--------")
+            time.sleep(0.2)
+            print("-------------------------------")#this is the receipt
+            time.sleep(0.2)
+            print("----Number-of-hours-parked:----")
+            time.sleep(0.2)
+            print("---------------",(hours),"-------------")
+            time.sleep(0.2)
+            print("---------Parking-Place:--------")
+            time.sleep(0.2)
+            print("--------------",parkingPlace,"-------------")
+            time.sleep(0.2)      
+            print("-------------------------------")
+            time.sleep(0.2)
+            print("----------Amount needed =",(cost),"--")
+            time.sleep(0.2)
+            print("----------Amount entered=",totalCash,"--")
+            time.sleep(0.2)
+            print("-------------------------------")
+            time.sleep(0.2)
+            print("-----------------Change=",(totalCash-cost),"----")
+            time.sleep(0.2)
+            print("-------------------------------")
+else:
+    print("Thank you for using Christophers Parking metre")#if you don't say yes the program ends and says thank you
