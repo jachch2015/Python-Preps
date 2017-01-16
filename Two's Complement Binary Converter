@@ -1,2 +1,11 @@
+#This is my Bimary to denary = Two's complement converter
+#For the first question you must enter Y/N answers
+
+complement=input(str("Do you want to input a Two's Complement binary number or a standered binary number?"))
+
 binary=input("Enter your binary(1,0)")
-print((int(binary[7])*1)+(int(binary[6])*2)+(int(binary[5])*4)+(int(binary[4])*8)+(int(binary[3])*16)+(int(binary[2])*32)+(int(binary[1])*64)-(int(binary[0])*128))
+
+if complement=="Y":
+    print("Your Two's Complement denary number is:",(int(binary[7])*1)+(int(binary[6])*2)+(int(binary[5])*4)+(int(binary[4])*8)+(int(binary[3])*16)+(int(binary[2])*32)+(int(binary[1])*64)-(int(binary[0])*128))
+else:
+    print("Your denary number is:",(int(binary[7])*1)+(int(binary[6])*2)+(int(binary[5])*4)+(int(binary[4])*8)+(int(binary[3])*16)+(int(binary[2])*32)+(int(binary[1])*64)+(int(binary[0])*128))
