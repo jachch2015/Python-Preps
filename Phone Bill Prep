@@ -1,0 +1,19 @@
+#This is my program that asks for the amount you spend on your phone bill each month and outputs the month you spent the most and how much it was
+
+monthName=["January","Febuary","March","April","May","June","July","August","September","October","November","December"]
+
+phoneBill=[0]*12#Inititalising an array
+
+maxPhoneBill=0#Initialising a variable
+
+maxMonth=0#Initialising a variable
+
+for i in range (0,12):#repeat this 12 times, 1 for each month
+    print ("Please input phone bill for month",monthName[i])#Assigns a bill in the same place as the month it is referring to in the other array
+    phoneBill[i]= float(input())#Input the bill amount, as a float data type.
+    if phoneBill[i]>maxPhoneBill: #If the phonebill is higher than the other one,then it becomes the new maxphonebill
+        maxMonth=monthName[i]#set the maxmonth to the month which had the highest bill
+        maxPhoneBill=phoneBill[i]#set the maxPhoneBill to the bill that was greater than the previous one
+
+print("Maximum Phone Bill:",maxMonth,"Which cost",maxPhoneBill)#After the loop has occured 12 times it outputs the month with the bill for that month
+    
