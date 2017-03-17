@@ -2,11 +2,11 @@
 
 monthName=["January","Febuary","March","April","May","June","July","August","September","October","November","December"]
 
-phoneBill=[0]*12#Inititalising an array
+phoneBill=[0]*12#Inititalising an array - to do what? and Why this way
 
-maxPhoneBill=0#Initialising a variable
+maxPhoneBill=0#Initialising a variable to do what?
 
-maxMonth=0#Initialising a variable
+maxMonth=0#Initialising a variable to do what?
 
 for i in range (0,12):#repeat this 12 times, 1 for each month
     print ("Please input phone bill for month",monthName[i])#Assigns a bill in the same place as the month it is referring to in the other array
