@@ -1,0 +1,101 @@
+ 
+#Greenhouse temperature control system
+#By CHristopher version 1
+
+#Check if system is on
+#if system on-get some temperature and variables
+#compare variables to determine correct heater on/off output
+#wait a bit
+#Loop again
+
+import time # so the computer knows what time is
+
+while True: # always loop forever
+    SystemOn=str(input("Is system on")).lower()[:1] # simplies your answer to a lower case y or n, by taking the first letter of you answer
+    if SystemOn not in("y","n",):# if you answer is not y or n it loops and asks again
+        print("Not a volid answer, please enter Y or N")# This makes sure that you can only answer with yes.no answers, if it is not yes or no it just askes again
+    else:
+        break
+while SystemOn=="y":# keep on looping while the system is told to be on
+    time.sleep(0.2)
+    print(".")
+    time.sleep(0.2)#Adds a little time interval so that it adds a little break between questions so we are not overwhelmed
+    print(".")
+    time.sleep(0.2)
+    print(".")
+    while True:
+        Auto=str(input("On auto?")).lower()[:1]#takes the first letter of your answer and makes it lower case
+        if Auto not in("y","n",):# again only accepts y/n answers
+            print("Not a valid answer, please enter Y or N")#again will ask again if your answer is not y/n
+        else:
+            break
+        SystemOn=str(input("Is system on")).lower()[:1]
+
+    if Auto=="y":# the auto statements separates whether they want the heater just to be on or whether they want the program to keep it at a set temperaturen bb
+        while True:# loop forever
+            try:#try because it doesnt happen, because they may not enter a float value
+                time.sleep(0.2)
+                print(".")
+                time.sleep(0.2)#more time intervals also to space out all the text, making it more asthetically pleasing
+                print(".")
+                time.sleep(0.2)
+                print(".")
+                CurrentTemp=float(input("What is the current temperature of the greenhouse"))# this is where you assign a value to the variable for the current temperature
+            except ValueError:#if the is a valueerror(not a float), the program asks you again for a proper value, so it only takes in float integers
+                print("You have not entered a valid temperture, please try again")
+                continue#keeps on asking untill they enter a proper float value
+            else:
+                break # end the loop
+            
+            
+        while True:
+            try:
+                time.sleep(0.2)
+                print(".")
+                time.sleep(0.2)
+                print(".")
+                time.sleep(0.2)
+                print(".")
+                UserTemp=float(input("What is the tempertaure would you like it to be at?"))
+            except ValueError:
+                print("You have not entered a valid temperture, please try again")
+                continue
+            else:
+                break
+        
+        if CurrentTemp > UserTemp:
+            time.sleep(0.2)
+            print(".")
+            time.sleep(0.2)
+            print(".")
+            time.sleep(0.2)
+            print(".")
+            print("The current temperature in the greenhouse is",CurrentTemp,"degrees centigrade, you set the temperature to ",UserTemp,", turning off the heater...")
+                #tells us what the program has decided to do based on the information your have given it
+        else:
+            time.sleep(0.2)
+            print(".")
+            time.sleep(0.2)
+            print(".")
+            time.sleep(0.2)
+            print(".")
+            print("The current temperature in the greenhouse is",CurrentTemp,"degrees centigrade, you set the temperature to ",UserTemp,", turning on the heater...")
+
+    else:
+        print("Turning heater on..")
+    time.sleep(4)#waits 4 seconds to re-run the whole thing
+    time.sleep(0.2)
+    print(".")
+    time.sleep(0.2)
+    print(".")
+    time.sleep(0.2)
+    print(".")
+    while True:
+        SystemOn=str(input("Is system on")).lower()[:1]#asking if the program is still on, if yes the whole thing starts again frm the top, if no the system will check again is 4 seconds
+        if SystemOn not in("y","n",):
+            print("Not a volid answer, please enter Y or N")
+        else:
+            break
+print("Thanks for using my program")
+   
+    
